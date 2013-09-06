@@ -1,9 +1,11 @@
 /**
- * namespace
+ * ns | namespace
  *
  * a namespace implementation for nodejs and your browser
  *
  * @author		Martin Lantzsch <martin@linux-doku.de>
+ * @link 		http://github.com/LinuxDoku/namespace
+ * @package		ns
  * @licence 	MIT
  */
 (function() {

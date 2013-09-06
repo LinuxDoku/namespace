@@ -1,7 +1,7 @@
 # namespace
 This package provides namespaces for your nodejs or browser app. It help's you organizing your code without writing wired variable constructs and helper objects.
 
-# Install
+## Install
 ```
 npm install ns
 ```
@@ -18,7 +18,7 @@ or in your browser simply add the ```namespace.js``` to your script sources
 <script type="text/javascript" src="namespace.js"></script>
 ```
 
-# Useage
+## Useage
 Define a new namespace and assign a function
 
 ```javascript
@@ -33,5 +33,5 @@ now you can run the function in any of your scripts which have access to the sam
 namespace('company.hello.world')(); // => Hello World
 ```
 
-# Licence
+## Licence
 The project is licenced under the conditions of the MIT licence.
