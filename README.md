@@ -35,5 +35,22 @@ now you can run the function in any of your scripts which have access to the sam
 namespace('company.hello.world')(); // => Hello World
 ```
 
+## Where is the namespace stored?
+When you assign any kind of variable, object or function to a namespace it won't be stored in the namespace scope.
+It is attached on nodejs to the ```global``` var and in your local browser to ```window```. These variables are reachable for all code in your application.
+
+So you may access the namespace defined as follows:
+
+```javascript
+namespace('hello.world', "Hello World");
+```
+
+in this way:
+
+```javascript
+global.hello.world // => Hello World
+window.hello.world // => Hello World
+```
+
 ## Licence
 The project is licenced under the conditions of the MIT licence.
