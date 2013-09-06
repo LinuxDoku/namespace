@@ -1,0 +1,18 @@
+{
+	"name": "ns",
+	"version": "1.0.0",
+	"description": "Organize your code in namespaces",
+	"author": "Martin Lantzsch <martin@linux-doku.de>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LinuxDoku/namespace"
+	},
+	"main": "namespace.js",
+	"scripts": {
+		"test": "mocha"
+	},
+	"devDependencies": {
+		"mocha": "*"
+	},
+	"licence": "MIT"
+}
