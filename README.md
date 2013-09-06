@@ -14,7 +14,7 @@ then require the module in your application code
 var namespace = require('ns');
 ```
 
-or in your browser simply add the ```namespace.js``` to your script sources
+or in the browser simply add the ```namespace.js``` to your script sources
 
 ```html
 <script type="text/javascript" src="namespace.js"></script>
@@ -29,7 +29,9 @@ namespace('company.hello.world', function() {
 });
 ```
 
-now you can run the function in any of your scripts which have access to the same window/global object
+now you can run the function in any of your scripts which have access to the same window/global object.
+
+A namespace can contain everything. Objects, functions and even variables - string, integer, float, ...
 
 ```javascript
 namespace('company.hello.world')(); // => Hello World
