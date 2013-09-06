@@ -20,7 +20,7 @@ or in your browser simply add the ```namespace.js``` to your script sources
 <script type="text/javascript" src="namespace.js"></script>
 ```
 
-## Useage
+## Usage
 Define a new namespace and assign a function
 
 ```javascript
