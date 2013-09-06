@@ -1,4 +1,5 @@
 # namespace
+[![Build Status](https://travis-ci.org/LinuxDoku/namespace.png?branch=master)](https://travis-ci.org/LinuxDoku/namespace)
 This package provides namespaces for your nodejs or browser app. It help's you organizing your code without writing wired variable constructs and helper objects.
 
 ## Install
