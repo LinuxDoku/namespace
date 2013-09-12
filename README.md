@@ -54,5 +54,5 @@ global.hello.world // => Hello World
 window.hello.world // => Hello World
 ```
 
-## Licence
+## License
 The project is licenced under the conditions of the MIT licence.
