@@ -55,4 +55,4 @@ window.hello.world // => Hello World
 ```
 
 ## License
-The project is licenced under the conditions of the MIT licence.
+The project is licensed under the conditions of the MIT licence.
