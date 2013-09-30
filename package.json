@@ -1,6 +1,6 @@
 {
 	"name": "ns",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Organize your code in namespaces",
 	"author": "Martin Lantzsch <martin@linux-doku.de>",
 	"repository": {
