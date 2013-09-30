@@ -9,6 +9,7 @@
  * @licence 	MIT
  */
 (function() {
+	"use strict";
 	/**
 	 * namespace
 	 * - assign object/function/var to namespace hirachy
@@ -22,16 +23,35 @@
 		// pick the global var for the current environment
 		var variable = typeof module === 'undefined' ? window : global;
 		var parts = namespace.split('.');
+		var obj;
+
+		if(typeof object === 'object') {
+			obj = {};
+			for(var field in object) {
+				obj[field] = object[field];
+			}
+		} else {
+			obj = object;
+		}
 
 		for(var index in parts) {
 			var part = parts[index];
-			if(object === undefined) {
+			if(obj === undefined) {
 				variable = variable[part];
 			} else {
-				if(index < parts.length - 1)
+				if(index < parts.length - 1) {
 					variable = variable[part] = variable[part] || {};
-				else
-					variable = variable[part] = object;
+				} else {
+					// merge pre existing object with the new one
+					if(variable[part] !== undefined) {
+						for(var field in variable[part]) {
+							if(!obj.hasOwnProperty(field)) {
+								obj[field] = variable[part][field];
+							}
+						}
+					}
+					variable = variable[part] = obj;
+				}
 			}
 		}
 

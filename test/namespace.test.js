@@ -24,7 +24,7 @@ describe('namespace', function() {
 			var testobj = {
 				foo: 'bar'
 			};
-			assert.equal(testobj, namespace('test.obj', testobj));
+			assert.equal(JSON.stringify(testobj), JSON.stringify(namespace('test.obj', testobj)));
 		});
 
 		it('should return the string', function() {
@@ -66,6 +66,31 @@ describe('namespace', function() {
 				return false;
 			};
 			assert.equal(testfn(), namespace('test.fn', testfn)());
+		});
+	});
+
+	describe('nested', function() {
+		it('should contain properties of both objects', function() {
+			var one = {
+				first: true
+			};
+			var main = {
+				main: true
+			};
+
+			namespace('test.main.one', one);
+			namespace('test.main', main);
+
+			assert.equal(JSON.stringify(namespace('test.main.one')), JSON.stringify(one));
+			// this test checks if test.main contains all the properties from main
+			assert.equal(true, (function() {
+				for(var field in main) {
+					if(!namespace('test.main').hasOwnProperty(field))
+						return false;
+				}
+				return true;
+			})());
+
 		});
 	});
 });
