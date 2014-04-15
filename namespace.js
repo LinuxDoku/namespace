@@ -44,9 +44,9 @@
 				} else {
 					// merge pre existing object with the new one
 					if(variable[part] !== undefined) {
-						for(var field in variable[part]) {
-							if(!obj.hasOwnProperty(field)) {
-								obj[field] = variable[part][field];
+						for(var property in variable[part]) {
+							if(!obj.hasOwnProperty(property)) {
+								obj[property] = variable[part][property];
 							}
 						}
 					}
